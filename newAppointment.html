@@ -30,37 +30,73 @@
 
     <div id="navbar"></div>
 
-    <div class="w-100 p-3">
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-6">
-                <label for="validationDefault01" class="form-label">Client NIF</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="NIF" required>
-              </div>
-            <div class="col-md-6">
-                <label for="validationDefault04">Client Pet</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>Pet 1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-            </div>
-            <div class="col-md-12 w-25 p-3 text-center">
-                <h4 class="font-weight-light">Date</h4>
-                <input type="date">
-                <input type="time">
-            </div>
-            <div class="input-group w-100 p-3">
-                <span class="input-group-text">Observações</span>
-                <textarea class="form-control" aria-label="With textarea"></textarea>
-              </div>
+    <div class="col-md-8 offset-md-2 text-center">
+        <div class="card text-center border-dark">
+            <div class="card-header">New Appointment</div>
+            <div class="card-body">
 
-              <div class="col-md-12 w-100 p-3">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-              </div>
-            
-          </form>
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationDefault01" class="form-label">Client NIF</label>
+                        <input type="text" class="form-control" id="validationDefault01" placeholder="NIF" required>
+                      </div>
+                    <div class="col-md-6">
+                        <!-- Select do nome do animal através do NIF do dono -->
+                        <label for="validationDefault04">Client Pet</label>
+                        <select class="form-control" id="exampleFormControlSelect1"> 
+                          <option>Nome A</option>
+                          <option>Nome B</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+        
+                    </div>
+                    <div class="input-group w-100 p-3">
+                        <span class="input-group-text">Observações</span>
+                        <textarea class="form-control" aria-label="With textarea" style="height: 100px;"></textarea>
+                    </div>
+        
+                    <div class="col-md-12 w-25 p-3 text-center">
+                        
+                        <input type="date">
+                        <div class="container">
+                            
+                        </div>
+                        <select class="form-select"    name="hourPicker" id="newAppointmentHours">
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                         </select>
+
+                        <select name="minutesPicker" id="newAppointmentMinutes">
+                            <option value="0">00</option>
+                            <option value="15">15</option>
+                            <option value="30">30</option>
+                            <option value="45">45</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-12 w-100 p-3">
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                    
+                  </form>
+            </div>
+        <div class="card-footer text-muted"><small>&copy; FetchIT 2021. Powered by Bootstrap</small></div>
+
+
+
+
+        
     </div>
     
 
