@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>FetchIt - New Appointment</title>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(function(){
+            $("#navbar").load("/nav.html"); 
+        });
+
+    </script> 
+
+
+</head>
+<body>
+      
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+
+    <div id="navbar"></div>
+
+    <div class="w-100 p-3">
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="validationDefault01" class="form-label">Client NIF</label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="NIF" required>
+              </div>
+            <div class="col-md-6">
+                <label for="validationDefault04">Client Pet</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Pet 1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+            </div>
+            <div class="col-md-12 w-25 p-3 text-center">
+                <h4 class="font-weight-light">Date</h4>
+                <input type="date">
+                <input type="time">
+            </div>
+            <div class="input-group w-100 p-3">
+                <span class="input-group-text">Observações</span>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+              </div>
+
+              <div class="col-md-12 w-100 p-3">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            
+          </form>
+    </div>
+    
+
+</body>
+</html>

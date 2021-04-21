@@ -1,0 +1,17 @@
+https://getbootstrap.com/docs/5.0/components/card/#grid-cards;
+
+
+Appointments - idpet;
+               idMedico;
+               Tipo;
+               data hora;
+               OBS;
+
+Animal dropdown - Cães;
+                  Gatos;
+                  outros;
+                  registar-
+                            Raça
+
+Clientes -Consultar;
+          Registar;
