@@ -5,5 +5,3 @@ var date = today.getFullYear()+ "/"
         + today.getHours() + ":" 
         + today.getMinutes() + ":"
         + today.getSeconds();
-
-
