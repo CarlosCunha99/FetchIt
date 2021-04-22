@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +31,7 @@
                     <div class="card-body">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">Name</span>
+                                <label for="searchInput"><span class="input-group-text" id="basic-addon1">Name</span></label>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
                         </div>
@@ -49,10 +51,6 @@
                             </tr>
                             </thead>
                             <tbody id="tableBody">
-                                <!--
-
-                                    Não apaguei o código em jsp para não deitar trabalho fora.
-                                    Códio para aceder á BD e preencher
                             <%
                                 try {
                                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -75,7 +73,7 @@
                                 } catch (SQLException throwables) {
                                     throwables.printStackTrace();
                                 }
-                            %>-->
+                            %>
                             </tbody>
                         </table>
                     </div>
