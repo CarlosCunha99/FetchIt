@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    session.invalidate();
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +32,7 @@
                         <label for="floatingPassword">Password</label>
                     </div>
                     <button type="submit" class="w-100 btn btn-lg btn-primary">Sign In</button>
-                    <hr class="my-4">
-                    <small class="text-muted">By clicking Sign In, you agree to the terms of use.</small>
+                    <div id="loginError"></div>
                 </form>
             </div>
         </div>

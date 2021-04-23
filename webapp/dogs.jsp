@@ -1,5 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="com.fetchit.FetchIt.PetsDao" %>
+<jsp:setProperty property="*" name="obj"/>
+<%
+    ResultSet rs = PetsDao.selectFrom("dogs");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,25 +53,19 @@
                             <tbody id="tableBody">
                             <%
                                 try {
-                                    Class.forName("com.mysql.cj.jdbc.Driver");
-                                } catch (ClassNotFoundException e) {
-                                    e.printStackTrace();
-                                }
-                                try (
-                                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fetchit","root","admin1234");
-                                        Statement st = con.createStatement();
-                                ){
-                                    ResultSet rs = st.executeQuery("select * from dogs");
-                                    while (rs.next()) {
-                                        out.print("<tr><td scope='row'>"+rs.getInt(1)+"</td>");
-                                        out.print("<td>"+rs.getString(2)+"</td><td>"+rs.getInt(3)+"</td>");
-                                        out.print("<td>"+rs.getDate(4)+"</td><td>"+rs.getString(5)+"</td>");
-                                        out.print("<td>"+rs.getString(6)+"</td><td>"+rs.getFloat(7)+"</td>");
-                                        out.print("<td>"+rs.getString(8)+"</td>");
-                                        out.print("<td>"+rs.getInt(9)+"</td><td>"+rs.getInt(10)+"</td></tr>");
+                                    while (true) {
+                                        assert rs != null : "There are no results";
+                                        if (!rs.next()) break;
+                                        out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
+                                        out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
+                                        out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
+                                        out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
+                                        out.print("<td>" + rs.getString(8) + "</td>");
+                                        out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
                                     }
-                                } catch (SQLException throwables) {
-                                    throwables.printStackTrace();
+                                    rs.close();
+                                } catch (SQLException e) {
+                                    e.printStackTrace();
                                 }
                             %>
                             </tbody>
