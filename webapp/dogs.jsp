@@ -53,17 +53,17 @@
                             <tbody id="tableBody">
                             <%
                                 try {
-                                    while (true) {
-                                        assert rs != null : "There are no results";
-                                        if (!rs.next()) break;
-                                        out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
-                                        out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
-                                        out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
-                                        out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
-                                        out.print("<td>" + rs.getString(8) + "</td>");
-                                        out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                    if (rs != null) {
+                                        while (rs.next()) {
+                                            out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
+                                            out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
+                                            out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
+                                            out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
+                                            out.print("<td>" + rs.getString(8) + "</td>");
+                                            out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                        }
+                                        rs.close();
                                     }
-                                    rs.close();
                                 } catch (SQLException e) {
                                     e.printStackTrace();
                                 }

@@ -1,22 +1,24 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.sql.*" %>
+<%@ page import="com.fetchit.FetchIt.PetsDao" %>
+<jsp:setProperty property="*" name="obj"/>
+<%
+    ResultSet rs = PetsDao.selectFrom("cats");
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <title>FetchIT - Cats</title>
-
-
 </head>
 <body>
-      
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-
 
     <%@ include file="nav.html" %>
     
@@ -35,47 +37,37 @@
                         </div>
                         <table class="table table-striped table-bordered table-hover text-center">
                             <thead>
-                            <tr>
-                                <th scope="col">Pet ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Age</th>
-                                <th scope="col">Birth</th>
-                                <th scope="col">Breed</th>
-                                <th scope="col">Gender</th>
-                                <th scope="col">Weight</th>
-                                <th scope="col">Color</th>
-                                <th scope="col">Vet ID</th>
-                                <th scope="col">Owner ID</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Pet ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Birth</th>
+                                    <th scope="col">Breed</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Weight</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Vet ID</th>
+                                    <th scope="col">Owner ID</th>
+                                </tr>
                             </thead>
                             <tbody id="tableBody">
-                                <!--
-
-                                    Não apaguei o código em jsp para não deitar trabalho fora.
-                                    Códio para aceder á BD e preencher
                             <%
                                 try {
-                                    Class.forName("com.mysql.cj.jdbc.Driver");
-                                } catch (ClassNotFoundException e) {
+                                    if (rs != null) {
+                                        while (rs.next()) {
+                                            out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
+                                            out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
+                                            out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
+                                            out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
+                                            out.print("<td>" + rs.getString(8) + "</td>");
+                                            out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                        }
+                                        rs.close();
+                                    }
+                                } catch (SQLException e) {
                                     e.printStackTrace();
                                 }
-                                try (
-                                        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fetchit","root","admin1234");
-                                        Statement st = con.createStatement();
-                                ){
-                                    ResultSet rs = st.executeQuery("select * from dogs");
-                                    while (rs.next()) {
-                                        out.print("<tr><td scope='row'>"+rs.getInt(1)+"</td>");
-                                        out.print("<td>"+rs.getString(2)+"</td><td>"+rs.getInt(3)+"</td>");
-                                        out.print("<td>"+rs.getDate(4)+"</td><td>"+rs.getString(5)+"</td>");
-                                        out.print("<td>"+rs.getString(6)+"</td><td>"+rs.getFloat(7)+"</td>");
-                                        out.print("<td>"+rs.getString(8)+"</td>");
-                                        out.print("<td>"+rs.getInt(9)+"</td><td>"+rs.getInt(10)+"</td></tr>");
-                                    }
-                                } catch (SQLException throwables) {
-                                    throwables.printStackTrace();
-                                }
-                            %>-->
+                            %>
                             </tbody>
                         </table>
                     </div>
