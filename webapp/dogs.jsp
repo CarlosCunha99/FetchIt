@@ -1,31 +1,21 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>FetchIT - Dogs</title>
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script> 
-        $(function(){
-            $("#navbar").load("/nav.html"); 
-        });
-    </script> 
 </head>
 <body>
-      
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
+    <%@ include file="nav.html" %>
 
-    <div id="navbar"></div>
-    
     <div class="w-auto p-3" id="dogs table">
         <div class="row justify-content-md-center">
             <div class="col col-md-12">
@@ -34,30 +24,26 @@
                     <div class="card-body">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">Name</span>
+                                <label for="searchInput"><span class="input-group-text" id="basic-addon1">Name</span></label>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
                         </div>
                         <table class="table table-striped table-bordered table-hover text-center">
                             <thead>
-                            <tr>
-                                <th scope="col">Pet ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Age</th>
-                                <th scope="col">Birth</th>
-                                <th scope="col">Breed</th>
-                                <th scope="col">Gender</th>
-                                <th scope="col">Weight</th>
-                                <th scope="col">Color</th>
-                                <th scope="col">Vet ID</th>
-                                <th scope="col">Owner ID</th>
-                            </tr>
+                                <tr>
+                                    <th scope="col">Pet ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Birth</th>
+                                    <th scope="col">Breed</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Weight</th>
+                                    <th scope="col">Color</th>
+                                    <th scope="col">Vet ID</th>
+                                    <th scope="col">Owner ID</th>
+                                </tr>
                             </thead>
                             <tbody id="tableBody">
-                                <!--
-
-                                    Não apaguei o código em jsp para não deitar trabalho fora.
-                                    Códio para aceder á BD e preencher
                             <%
                                 try {
                                     Class.forName("com.mysql.cj.jdbc.Driver");
@@ -80,7 +66,7 @@
                                 } catch (SQLException throwables) {
                                     throwables.printStackTrace();
                                 }
-                            %>-->
+                            %>
                             </tbody>
                         </table>
                     </div>
@@ -92,7 +78,6 @@
 
     <script>
         function search() {
-
             let input, filter, tb, tr, td, textValue;
 
             input = document.getElementById("searchInput")
