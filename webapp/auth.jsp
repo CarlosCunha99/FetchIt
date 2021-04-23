@@ -9,7 +9,10 @@
         response.sendRedirect("index.jsp");
     } else {
 %>
-<jsp:include page="login.jsp"></jsp:include>
+<jsp:include page="login.jsp"/>
+<script>
+    document.getElementById("loginError").innerHTML = "<hr class='my-4'><small class='text-danger'>Incorrect ID/Password combination.</small>"
+</script>
 <%
     }
 %>
