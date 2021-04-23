@@ -27,7 +27,7 @@
                                 <label for="searchInput"><span class="input-group-text" id="basic-addon1">Name</span></label>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
-                            <a href="newAppointment.html" class="btn btn-outline-secondary">+ Register Dog</a>
+                            <a href="new-pet.html?species=dog" class="btn btn-outline-secondary">+ Register Dog</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover text-center">
                             <thead>
@@ -35,13 +35,13 @@
                                     <th scope="col">Pet ID</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Age</th>
-                                    <th scope="col">Birth</th><!-- vai sair-->
+                                    <th scope="col">Birth</th> <!-- temporary -->
                                     <th scope="col">Breed</th>
                                     <th scope="col">Gender</th>
-                                    <th scope="col">Weight</th><!-- vai sair-->
-                                    <th scope="col">Color</th><!-- vai sair-->
-                                    <th scope="col">Vet ID</th><!-- vai sair-->
-                                    <th scope="col">Owner ID</th><!-- vai sair-->
+                                    <th scope="col">Weight</th> <!-- temporary -->
+                                    <th scope="col">Color</th> <!-- temporary -->
+                                    <th scope="col">Vet ID</th> <!-- temporary -->
+                                    <th scope="col">Owner ID</th> <!-- temporary -->
                                 </tr>
                             </thead>
                             <tbody id="tableBody">
