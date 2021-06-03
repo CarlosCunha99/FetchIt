@@ -33,7 +33,7 @@
                                 <label for="searchInput"><span class="input-group-text" id="basic-addon1">Name</span></label>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
-                            <a href="new-pet.html?species=dog" class="btn btn-outline-secondary">+ Register Dog</a>
+                            <a href="new-pet.jsp?species=dog" class="btn btn-outline-secondary">+ Register Dog</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover text-center">
                             <thead>
@@ -53,17 +53,17 @@
                             <tbody id="tableBody">
                             <%
                                 try {
-                                    while (true) {
-                                        assert rs != null : "There are no results";
-                                        if (!rs.next()) break;
-                                        out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
-                                        out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
-                                        out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
-                                        out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
-                                        out.print("<td>" + rs.getString(8) + "</td>");
-                                        out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                    if (rs != null) {
+                                        while (rs.next()) {
+                                            out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
+                                            out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
+                                            out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
+                                            out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
+                                            out.print("<td>" + rs.getString(8) + "</td>");
+                                            out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                        }
+                                        rs.close();
                                     }
-                                    rs.close();
                                 } catch (SQLException e) {
                                     e.printStackTrace();
                                 }
