@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 w-100 p-3">
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <input type="submit" class="btn btn-secondary" value="Submit" name="submit">
                     </div>
                 </form>
             </div>
