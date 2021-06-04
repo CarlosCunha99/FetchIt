@@ -1,9 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="com.fetchit.FetchIt.PetsDao" %>
+<%@ page import="com.fetchit.FetchIt.PetDao" %>
 <jsp:setProperty property="*" name="obj"/>
 <%
-    ResultSet rs = PetsDao.selectFrom("dogs");
+    ResultSet rs = PetDao.selectSpecies("Cão");
 %>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label for="searchInput"><span class="input-group-text" id="basic-addon1">Name</span></label>
+                                <span class="input-group-text" id="basic-addon1">Name</span>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
                             <a href="new-pet.jsp?species=dog" class="btn btn-outline-secondary">+ Register Dog</a>
@@ -41,11 +41,8 @@
                                     <th scope="col">Pet ID</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Age</th>
-                                    <th scope="col">Birth</th> <!-- temporary -->
                                     <th scope="col">Breed</th>
                                     <th scope="col">Gender</th>
-                                    <th scope="col">Weight</th> <!-- temporary -->
-                                    <th scope="col">Color</th> <!-- temporary -->
                                     <th scope="col">Vet ID</th> <!-- temporary -->
                                     <th scope="col">Owner ID</th> <!-- temporary -->
                                 </tr>
@@ -55,12 +52,11 @@
                                 try {
                                     if (rs != null) {
                                         while (rs.next()) {
-                                            out.print("<tr><td scope='row'>" + rs.getInt(1) + "</td>");
-                                            out.print("<td>" + rs.getString(2) + "</td><td>" + rs.getInt(3) + "</td>");
-                                            out.print("<td>" + rs.getDate(4) + "</td><td>" + rs.getString(5) + "</td>");
-                                            out.print("<td>" + rs.getString(6) + "</td><td>" + rs.getFloat(7) + "</td>");
-                                            out.print("<td>" + rs.getString(8) + "</td>");
-                                            out.print("<td>" + rs.getInt(9) + "</td><td>" + rs.getInt(10) + "</td></tr>");
+                                            out.print("<tr><td scope='row'><a href='pet-profile.jsp?id=" + rs.getInt(1) + "'>");
+                                            out.print(rs.getInt(1) + "</a></td><td>" + rs.getString(2) + "</td>");
+                                            out.print("<td>" + rs.getInt(3) + "</td><td>" + rs.getString(6) + "</td>");
+                                            out.print("<td>" + rs.getString(7) + "</td><td>" + rs.getInt(10) + "</td>");
+                                            out.print("<td>" + rs.getInt(11) + "</td></tr>");
                                         }
                                         rs.close();
                                     }

@@ -23,61 +23,59 @@
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="selectSpecies">Species</label>
                         <select class="form-select" id="selectSpecies" aria-label="species_select" name="speciesInput">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Cat</option>
-                            <option value="2">Dog</option>
-                            <option value="3">Other</option>
+                            <option selected value="Cão">Cão</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Hamster">Hamster</option>
                           </select>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Owner</span>
+                            <span class="input-group-text">Owner ID</span>
                         </div>
                         <input type="text" class="form-control" placeholder="NIF" aria-label="Owner" aria-describedby="basic-addon1" name="ownerInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pet Name</span>
+                            <span class="input-group-text">Pet Name</span>
                         </div>
                         <input type="text" class="form-control" placeholder="Name" aria-label="Pet" aria-describedby="basic-addon1" name="pet_nameInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pet Breed</span>
+                            <span class="input-group-text">Breed</span>
                         </div>
                         <input type="text" class="form-control" placeholder="Breed" aria-label="Breed" aria-describedby="basic-addon1" name="pet_breedInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pet Birth Date</span>
+                            <span class="input-group-text">Birth</span>
                         </div>
                         <input type="text" class="form-control" placeholder="dd/mm/aaaa" aria-label="birth" aria-describedby="basic-addon1" name="pet_birthInput">
                     </div>
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="selectgender">Gender</label>
                         <select class="form-select" id="selectgender" aria-label="gender_select" name="GenderInput">
-                            <option selected>Open this select menu</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
+                            <option selected value="male">Male</option>
+                            <option value="female">Female</option>
                           </select>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pet Weight</span>
+                            <span class="input-group-text">Weight</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="weight in kg" aria-label="weight" aria-describedby="basic-addon1" name="weightInput">
+                        <input type="text" class="form-control" placeholder="E.g. 20.50" aria-label="weight" aria-describedby="basic-addon1" name="weightInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Pet Color</span>
+                            <span class="input-group-text">Color</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Ex: black/white" aria-label="color" aria-describedby="basic-addon1" name="colorInput">
+                        <input type="text" class="form-control" placeholder="E.g. white/cream" aria-label="color" aria-describedby="basic-addon1" name="colorInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Responsible Vet</span>
+                            <span class="input-group-text">Veterinary ID</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Responsible Vet ID" aria-label="vet" aria-describedby="basic-addon1" name="vetInput">
+                        <input type="text" class="form-control" placeholder="Veterinary responsible for the pet" aria-label="vet" aria-describedby="basic-addon1" name="vetInput">
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Create" name="submit">
                 </form>
