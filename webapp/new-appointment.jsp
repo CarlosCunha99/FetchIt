@@ -22,7 +22,7 @@
                 <form class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
                         <label for="inputNIF" class="form-label">Owner's NIF</label>
-                        <input type="text" class="form-control" id="inputNIF" placeholder="NIF" required>
+                        <input type="text" class="form-control" id="inputNIF" placeholder="NIF" required name="nifInput">
                     </div>
                     <div class="col-md-6">
                         <!-- Select do nome do animal através do NIF do dono -->
@@ -37,12 +37,12 @@
                     </div>
                     <div class="input-group w-100 p-3">
                         <span class="input-group-text">Observações</span>
-                        <textarea class="form-control" aria-label="With textarea" style="height: 100px;"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" style="height: 100px;" name="observacoesInput"></textarea>
                     </div>
                     <div class="col-md-12 w-25 p-3 text-center">
                         <input type="date">
                         <div class="p-3">
-                            <select class="form-select"    name="hourPicker" id="newAppointmentHours">
+                            <select class="form-select"    name="hourPickerInput" id="newAppointmentHours">
                                 <option value="9">09</option>
                                 <option value="10">10</option>
                                 <option value="11">11</option>

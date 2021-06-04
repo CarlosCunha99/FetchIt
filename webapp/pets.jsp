@@ -33,7 +33,7 @@
                                 <span class="input-group-text" id="basic-addon1">Name</span>
                             </div>
                             <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
-                            <a href="newAppointment.html" class="btn btn-outline-secondary">+ Register Pet</a>
+                            <a href="new-pet.jsp" class="btn btn-outline-secondary">+ Register Pet</a>
                         </div>
                         <table class="table table-striped table-bordered table-hover text-center">
                             <thead>

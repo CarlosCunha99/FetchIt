@@ -27,7 +27,7 @@
                                     <span class="input-group-text" id="basic-addon1">Search</span>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Search for names..." id="searchInput" onkeyup="search()">
-                                <a href="newAppointment.html" class="btn btn-outline-secondary">+ Register Owner</a>
+                                <a href="new-owner.jsp" class="btn btn-outline-secondary">+ Register Owner</a>
                             </div>
                             <table class="table table-striped table-bordered table-hover text-center">
                                 <thead>
