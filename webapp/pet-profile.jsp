@@ -31,53 +31,84 @@
         if (rs != null) {
             while (rs.next()) {
 %>
-                <div class="card text-center border-dark">
-                    <div class="card-header">Pet Profile - ID <%= rs.getInt(1) %></div>
+                 <div class="card text-center border-dark">
+                    <div class="card-header"><h2>Pet Profile - ID <%= rs.getInt(1) %></h2></div>
                     <div class="card-body">
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Owner Name</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(2) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Pet Name</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(3) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Species</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(4) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Breed</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(5) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Age</span>
-                            <input type="text" class="form-control" value="<%= rs.getInt(6) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Birth Date</span>
-                            <input type="text" class="form-control" value="<%= rs.getDate(7) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Gender</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(8) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Weight</span>
-                            <input type="text" class="form-control" value="<%= rs.getFloat(9) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Color</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(10) %>" disabled>
-                        </div>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text">Vet Name</span>
-                            <input type="text" class="form-control" value="<%= rs.getString(11) %>" disabled>
-                        </div>
-                    </div>
-                    <div class="card-footer text-muted"><small>&copy; FetchIT 2021. Powered by Bootstrap</small></div>
-                </div>
-            </div>
+                        <div class="col-auto">
+                            <label for="inputPassword6" class="col-form-label"><h4>Owner name</h4></label>
+                            </div>
+                            <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                                <h5><%= rs.getString(3) %></h5>
+                            </span>
+                            </div>
+                            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                        <div class="col-auto">
+                            <label for="inputPassword6" class="col-form-label"><h4>Pet Name</h4></label>
+                          </div>
+                          <div class="col-auto">
+                            <span id="passwordHelpInline" class="form-text">
+                               <h5><%= rs.getString(2) %></h5>
+                            </span>
+                          </div>
+                          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                          <div class="row">
+                            <div class="col">
+                                <label for="inputPassword6" class="col-form-label"><h4>Species</h4></label>
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(4) %></h5>
+                                  </span>
+                            </div>
+                            <div class="col">
+                                <label for="inputPassword6" class="col-form-label"><h4>Breed</h4></label>
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(5) %></h5>
+                                  </span>
+                            </div>
+                          </div>
+                          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                          <div class="row">
+                            <div class="col">
+                                <label for="inputPassword6" class="col-form-label"><h4>Birth Date</h4></label>
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(7) %></h5>
+                                  </span>
+                            </div>
+                            <div class="col">
+                                <label for="inputPassword6" class="col-form-label"><h4>Age</h4></label>
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(6) %></h5>
+                                  </span>
+                          </div>
+                          </div>
+                          <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                          <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label"><h4>Weight</h4></label>
+                                </div>
+                                <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(9) %></h5>
+                                </span>
+                            </div>
+                            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label"><h4>Color</h4></label>
+                                </div>
+                                <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(10) %></h5>
+                                </span>
+                            </div>
+                            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                            <div class="col-auto">
+                                <label for="inputPassword6" class="col-form-label"><h4>Vet Name</h4></label>
+                                </div>
+                                <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+                                    <h5><%= rs.getString(11) %></h5>
+                                </span>
+                            </div>
 <%
             }
             rs.close();

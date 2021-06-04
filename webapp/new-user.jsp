@@ -22,41 +22,41 @@
                 <form>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="UserName" aria-label="username" name="usernameInput">
+                            <input type="text" class="form-control" placeholder="UserName"  name="usernameInput">
                         </div>
                     </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Password" aria-label="Password" name="passwordInput">
+                            <input type="text" class="form-control" placeholder="Password" name="passwordInput">
                         </div>
                     </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Name" aria-label="Name" name="nameInput">
+                            <input type="text" class="form-control" placeholder="Name" name="nameInput">
                         </div>
                     </div>
                     <div class="col form-floating">
-                            <input type="text" class="form-control" placeholder="Age" aria-label="Age" name="ageInput">
+                            <input type="text" class="form-control" placeholder="Age" name="ageInput">
                         </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" name="emailInput">
+                            <input type="email" class="form-control" placeholder="E-mail" name="emailInput">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Contacto" aria-label="contacto" name="contactoInput">
+                            <input type="text" class="form-control" placeholder="Contacto" name="contactoInput">
                         </div>
                     </div> 
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Morada" aria-label="Morada" name="moradaInput">
+                            <input type="text" class="form-control" placeholder="Morada" name="moradaInput">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="ZIP Code" aria-label="ZIP" name="ZIPInput">
+                            <input type="text" class="form-control" placeholder="ZIP Code" name="ZIPInput">
                         </div>
                     </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Role" aria-label="Role" name="roleInput">
+                            <input type="text" class="form-control" placeholder="Role" name="roleInput">
                         </div>
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Create" name="submit">

@@ -22,26 +22,26 @@
                 <form>
                     <div class="row g-3 p-3">
                         <div class="col form-floating">
-                            <input type="text" class="form-control" placeholder="Client NIF" aria-label="NIFInput">
+                            <input type="text" class="form-control" placeholder="Client NIF">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Name" aria-label="NameInput">
+                            <input type="text" class="form-control" placeholder="Name">
                         </div>
                     </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mailInput">
+                            <input type="email" class="form-control" placeholder="E-mail">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Contacto" aria-label="contactoInput">
+                            <input type="text" class="form-control" placeholder="Contacto">
                         </div>
                     </div> 
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Morada" aria-label="MoradaInput">
+                            <input type="text" class="form-control" placeholder="Morada">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="ZIP Code" aria-label="ZIPInput">
+                            <input type="text" class="form-control" placeholder="ZIP Code">
                         </div>
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Create" name="submit">

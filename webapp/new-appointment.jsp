@@ -37,7 +37,7 @@
                     </div>
                     <div class="input-group w-100 p-3">
                         <span class="input-group-text">Observações</span>
-                        <textarea class="form-control" aria-label="With textarea" style="height: 100px;" name="observacoesInput"></textarea>
+                        <textarea class="form-control" style="height: 100px;" name="observacoesInput"></textarea>
                     </div>
                     <div class="col-md-12 w-25 p-3 text-center">
                         <input type="date">

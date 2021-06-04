@@ -32,25 +32,25 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Owner ID</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="NIF" aria-label="Owner" aria-describedby="basic-addon1" name="ownerInput">
+                        <input type="text" class="form-control" placeholder="NIF" aria-label="Owner" name="ownerInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Pet Name</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Name" aria-label="Pet" aria-describedby="basic-addon1" name="pet_nameInput">
+                        <input type="text" class="form-control" placeholder="Name" aria-label="Pet" name="pet_nameInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Breed</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Breed" aria-label="Breed" aria-describedby="basic-addon1" name="pet_breedInput">
+                        <input type="text" class="form-control" placeholder="Breed" aria-label="Breed" name="pet_breedInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Birth</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="dd/mm/aaaa" aria-label="birth" aria-describedby="basic-addon1" name="pet_birthInput">
+                        <input type="text" class="form-control" placeholder="dd/mm/aaaa" aria-label="birth" name="pet_birthInput">
                     </div>
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="selectgender">Gender</label>
@@ -63,19 +63,19 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Weight</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="E.g. 20.50" aria-label="weight" aria-describedby="basic-addon1" name="weightInput">
+                        <input type="text" class="form-control" placeholder="E.g. 20.50" aria-label="weight" name="weightInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Color</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="E.g. white/cream" aria-label="color" aria-describedby="basic-addon1" name="colorInput">
+                        <input type="text" class="form-control" placeholder="E.g. white/cream" aria-label="color" name="colorInput">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text">Veterinary ID</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Veterinary responsible for the pet" aria-label="vet" aria-describedby="basic-addon1" name="vetInput">
+                        <input type="text" class="form-control" placeholder="Veterinary responsible for the pet" aria-label="vet" name="vetInput">
                     </div>
                     <input type="submit" class="btn btn-secondary" value="Create" name="submit">
                 </form>

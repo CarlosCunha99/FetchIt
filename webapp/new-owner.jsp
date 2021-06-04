@@ -22,29 +22,29 @@
                 <form>
                     <div class="row g-3 p-3">
                         <div class="col form-floating">
-                            <input type="text" class="form-control" placeholder="Client NIF" aria-label="NIF">
+                            <input type="text" class="form-control" placeholder="Client NIF" >
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                            <input type="text" class="form-control" placeholder="Name" >
                         </div>
                     </div>
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail">
+                            <input type="email" class="form-control" placeholder="E-mail" >
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Contacto" aria-label="contacto">
+                            <input type="text" class="form-control" placeholder="Contacto" >
                         </div>
                     </div> 
                     <div class="row g-3 p-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Morada" aria-label="Morada">
+                            <input type="text" class="form-control" placeholder="Morada" >
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="ZIP Code" aria-label="ZIP">
+                            <input type="text" class="form-control" placeholder="ZIP Code">
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-secondary" value="Create">
+                    <input type="submit" class="btn btn-secondary" value="Create" name="submit">
                 </form>
             </div>
             <div class="card-footer text-muted"><small>&copy; FetchIT 2021. Powered by Bootstrap</small></div>
